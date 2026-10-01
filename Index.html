@@ -13,14 +13,18 @@
     <header>
         <nav>
             <div class="logo">
-                <span><img src="../Projek2 (individu)/IMG/logo.png" alt="Logo Web"></span>
+                <img src="../Projek2 (individu)/IMG/logo.png" alt="Logo Web">
                 <span>Cineva</span>
             </div>
 
             <ul class="nav-menu">
-            <li><a href="#" id="navHome" class="nav-link active"><i class="ti ti-home"></i>Home</a></li>
+                <li>
+                    <a href="#" id="navHome" class="nav-link active"><i class="ti ti-home"></i><span>Home</span></a>
+                </li>
             
-            <li><a href="#" id="navWatchlist" class="nav-link"><i class="ti ti-heart"></i>Watchlist</a></li>
+                <li>
+                    <a href="#" id="navWatchlist" class="nav-link"><i class="ti ti-heart"></i><span>Watchlist</span></a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -50,10 +54,10 @@
                 <article class="movie-card" data-id="1">
                     <div class="poster-wrapper">
                         <img src="../Projek2 (individu)/IMG/Poster film/action/World War Z.jpeg" alt="Poster film World War Z">
-                        <button class="watchlist-btn" aria-label="Tambah WWZ ke watchlist"><i class="ti ti-heart"></i></button>
+                        <button class="watchlist-btn" aria-label="Tambah World War Z ke watchlist"><i class="ti ti-heart"></i></button>
                     </div>
                     <h3>World War Z</h3>
-                    <p class="meta">★ 7.0 &middot; 2013</p>
+                    <p class="info"><span class="star">&#9733;</span>7.0 &middot; 2013</p>
                 </article>
 
                 <article class="movie-card" data-id="2">
@@ -62,7 +66,7 @@
                         <button class="watchlist-btn" aria-label="Tambah the hangover ke watchlist"><i class="ti ti-heart"></i></button>
                     </div>
                     <h3>The Hangover</h3>
-                    <p class="meta">★ 7.7 &middot; 2009</p>
+                    <p class="info"><span class="star">&#9733;</span>7.7 &middot; 2009</p>
                 </article>
 
             </div>
@@ -70,7 +74,7 @@
 
 
         <section id="detailSection" class="hidden">
-            <div class="breadcrumb">
+            <div class="back-nav">
                 <a href="#" id="backToHome">Home</a>
                 <span>&larr;</span>
                 <span id="detailBreadcrumbTitle">The Hangover</span>
@@ -81,7 +85,7 @@
 
                 <div class="detail-info">
                     <h2 id="detailTitle">The Hangover</h2>
-                    <p class="meta" id="detailMeta">★ 7.7 &middot; 2009 &middot; Comedy</p>
+                    <p class="info" id="detailMeta"><span class="star">&#9733;</span>7.7 &middot; 2009 &middot; Comedy</p>
 
                     <h3>Sinopsis</h3>
                     <p id="detailSynopsis">Tiga sahabat terbangun setelah pesta lajang di Las Vegas tanpa ingatan tentang kejadian semalam, sementara sang calon pengantin pria menghilang. Mereka harus menjelajahi kota demi menemukan teman mereka tepat waktu untuk acara pernikahannya.</p>
@@ -121,6 +125,6 @@
         <p>&copy; 2026 Cineva</p>
     </footer>
 
-    <div id="toast" class="toast hidden"></div>
+    <div id="toast" class="notification hidden"></div>
 </body>
 </html>
