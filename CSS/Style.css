@@ -280,3 +280,15 @@ main {
     background-color: var(--color-primary-dark);
 }
 
+.cast-section h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.cast-list {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+}
