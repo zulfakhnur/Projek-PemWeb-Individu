@@ -292,3 +292,16 @@ main {
     overflow-x: auto;
     padding-bottom: 8px;
 }
+
+
+
+/*  */
+
+.watchlist-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/*  */
+
