@@ -14,3 +14,9 @@
     --color-accent: #FFB020;
     --color-border: #E4E1F5;
 }
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
