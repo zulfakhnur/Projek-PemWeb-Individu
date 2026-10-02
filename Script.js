@@ -235,3 +235,9 @@ function tampilkanSection(target) {
     document.getElementById(target + "Section").classList.remove("hidden");
 }
 
+function setNavAktif (activeId) {
+    document.querySelectorAll(".nav-link").forEach(link => {link.classList.remove("active");
+    });
+    document.getElementById(activeId).classList.add("active");
+}
+
