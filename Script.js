@@ -154,7 +154,7 @@ const movies = [
         director: "Tim Story",
         writer: "Ernest Tidyman, Kenya Barris, dan Alex Barnow",
         cast: [
-            {name: "Alexander Shipp", photo: "IMG/Cast/Shaft/Alexander Shipp.jpeg"},
+            {name: "Alexandra Shipp", photo: "IMG/Cast/Shaft/Alexandra Shipp.jpeg"},
             {name: "Jessie T. Usher", photo: "IMG/Cast/Shaft/Jessie T. Usher.jpeg"},
             {name: "Regina Hall", photo: "IMG/Cast/Shaft/Regina Hall.jpeg"},
             {name: "Richard Roundtree", photo: "IMG/Cast/Shaft/Richard Roundtree.jpeg"},
@@ -209,7 +209,7 @@ const movies = [
         writer: "Drew Goddard",
         cast: [
             {name: "Elizabeth Anne Caplan", photo: "IMG/Cast/Cloverfield/Elizabeth Anne Caplan.jpeg"},
-            {name: "Jessica Lucas", photo: "IMG/Cast/Cloverfield/Jessica Lucas.jpeg"},
+            {name: "Jessica Lucas", photo: "IMG/Cast/Cloverfield/Jesicca Lucas.jpeg"},
             {name: "Michael Stahl-David", photo: "IMG/Cast/Cloverfield/Michael Stahl-David.jpeg"},
             {name: "Odette Annable", photo: "IMG/Cast/Cloverfield/Odette Annable.jpeg"},
             {name: "TJ Miller", photo: "IMG/Cast/Cloverfield/TJ Miller.jpeg"}
