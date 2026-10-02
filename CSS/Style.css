@@ -21,9 +21,9 @@ body {
     color: var(--color-text);
 }
 
-.hidden {
+/* .hidden {
     display: none;
-}
+} */
 
 /*  */
 
@@ -200,3 +200,16 @@ main {
 
 /*  */
 
+.breadcrumb {
+    display: flex;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--color-text-secondary);
+    margin-bottom: 20px;
+}
+
+.breadcrumb a {
+    color: var(--color-primary);
+    font-weight: 500;
+    text-decoration: none;
+}
