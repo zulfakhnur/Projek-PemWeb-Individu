@@ -216,3 +216,10 @@ const movies = [
         ]
     }
 ];
+
+let watchlist = [];
+
+let genreSekarang = "All";
+let searchSekarang = "";
+
+let idDetailSekarang = null;
