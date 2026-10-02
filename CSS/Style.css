@@ -21,9 +21,9 @@ body {
     color: var(--color-text);
 }
 
-/* .hidden {
+.hidden {
     display: none;
-} */
+}
 
 .star {
     color: var(--color-accent);
@@ -432,4 +432,43 @@ footer {
     border-radius: 8px;
     font-size: 13px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+@media (max-width: 1024px) {
+    .movie-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 14px 20px;
+    }
+
+    .nav-link span {
+        display: none;
+    }
+
+    main {
+        padding: 24px 20px;
+    }
+
+    .section-heading h1 {
+        font-size: 20px;
+    }
+
+    .movie-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
+
+    .detail-wrapper {
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .detail-wrapper > img {
+        width: 100%;
+    }
 }
