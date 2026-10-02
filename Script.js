@@ -427,3 +427,16 @@ function tooggleWatchlist(id) {
         updateDetailWatchlistButton(movie);
     }
 }
+
+function addToWatchlist(movie) {
+    watchlist.push(movie);
+    showToast(`${movie.title} ditambahkan ke watchlist`);
+}
+
+function removeFromWatchlist(id) {
+    const movie = movies.find(m => m.id ===id);
+    watchlist = watchlist.filter(m => m.id !== id);
+    if (movie) {
+        showToast(`${movie.title} dihapus dari watchlist`);
+    }
+}
