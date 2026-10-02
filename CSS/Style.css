@@ -163,3 +163,16 @@ main {
     font-size: 12px;
     color: var(--color-text-secondary);
 }
+
+.poster-wrapper {
+    position: relative;
+    cursor: pointer;
+}
+
+.poster-wrapper img {
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
