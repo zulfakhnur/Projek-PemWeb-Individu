@@ -312,3 +312,8 @@ function getFilteredMovies() {
         return matchGenre && matchSearch;
     });
 }
+
+function applyFilter() {
+    const filtered = getFilteredMovies();
+    renderMovie(filtered);
+}
