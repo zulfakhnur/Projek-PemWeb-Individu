@@ -217,9 +217,21 @@ const movies = [
     }
 ];
 
+// -------
+
 let watchlist = [];
 
 let genreSekarang = "All";
 let searchSekarang = "";
 
 let idDetailSekarang = null;
+
+// --------
+
+function tampilkanSection(target) {
+    document.getElementById("homeSection").classList.add("hidden");
+    document.getElementById("detailSection").classList.add("hidden");
+    document.getElementById("watchlistSection").classList.add("hidden");
+    document.getElementById(target + "Section").classList.remove("hidden");
+}
+
