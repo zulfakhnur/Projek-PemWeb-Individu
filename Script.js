@@ -241,3 +241,21 @@ function setNavAktif (activeId) {
     document.getElementById(activeId).classList.add("active");
 }
 
+document.getElementById("navHome").addEventListener("click", (e) => {
+    e.preventDefault();
+    tampilkanSection("home");
+    setNavAktif("navHome");
+});
+
+document.getElementById("navWatchlist").addEventListener("click", (e) => {
+    e.preventDefault();
+    tampilkanSection("watchlist");
+    setNavAktif("navWatchlist");
+});
+
+document.getElementById("backToHome").addEventListener("click", (e) => {
+    e.preventDefault();
+    tampilkanSection("home");
+    setNavAktif("navHome");
+});
+
