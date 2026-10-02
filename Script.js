@@ -487,3 +487,8 @@ function showToast(message) {
         toast.classList.add("hidden");
     }, 2500);
 }
+
+// --------------
+applyFilter();
+renderWatchlist();
+updateWatchlistCount();
