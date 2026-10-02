@@ -364,3 +364,22 @@ function openDetail(id) {
 
     showSection("detail")
 }
+
+function renderCast(castArray) {
+    const castList = document.getElementById("castList");
+    castList.innerHTML= "";
+
+    if (castArray.length === 0) {
+        castList.innerHTML = `<p class="empty-state">Data pemeran belum tersedia</p>`;
+        return;
+    }
+
+    castArray.forEach(actor => {
+        castList.innerHTML += `
+        <div class="cast-item">
+        <img src="${actor.photo}" alt="${actor.name}">
+        <p>${actor.name}</p>
+        </div>
+        `;
+    });
+}
