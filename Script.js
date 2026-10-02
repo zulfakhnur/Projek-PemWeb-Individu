@@ -259,3 +259,15 @@ document.getElementById("backToHome").addEventListener("click", (e) => {
     setNavAktif("navHome");
 });
 
+// ---------
+
+function renderMovie(movieList) {
+    const container = document.getElementById("movieContainer");
+    container.innerHTML = "";
+
+    if (movieList.length === 0) {
+        container.innerHTML = `<p class="empty-state">Film tidak ditemukan</p>`;
+        return;
+    }
+}
+
