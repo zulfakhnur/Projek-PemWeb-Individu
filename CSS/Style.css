@@ -213,3 +213,17 @@ main {
     font-weight: 500;
     text-decoration: none;
 }
+
+.detail-wrapper {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 28px;
+}
+
+.detail-wrapper > img {
+    width: 220px;
+    flex-shrink: 0;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    border-radius: 10px;
+}
