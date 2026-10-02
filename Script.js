@@ -317,3 +317,10 @@ function applyFilter() {
     const filtered = getFilteredMovies();
     renderMovie(filtered);
 }
+
+function setActiveFilter(activeId) {
+    document.querySelectorAll(".filter-btn").forEach(btn => {
+        btn.classList.remove("active");
+    });
+    document.getElementById(activeId).classList.add("active");
+}
