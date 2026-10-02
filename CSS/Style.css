@@ -95,3 +95,13 @@ main {
     color: var(--color-text-secondary);
     font-size: 14px;
 }
+
+.search-bar input {
+    border: none;
+    font-family: inherit;
+    font-size: 13px;
+    color: var(--color-text);
+    width: 100%;
+}
+
+
