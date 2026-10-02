@@ -440,3 +440,28 @@ function removeFromWatchlist(id) {
         showToast(`${movie.title} dihapus dari watchlist`);
     }
 }
+
+function renderWatchlist() {
+    const list = document.getElementById("watchlistList");
+    list.innerHTML = "";
+
+    if (watchlist.length === 0) {
+        list.innerHTML = `<p class="empty-state">Belum ada film do watchlist kamu</p>`;
+        return;
+    }
+
+    watchlist.forEach(movie => {
+        list.innerHTML += `
+    <div class="watchlist-item">
+        <img src="${movie.poster}" alt="${movie.title}">
+        <div class="text-wrap">
+        <h3>${movie.title}</h3>
+        <p class="info"><span class="star">&#9733;</span> ${movie.rating} &middot; ${movie.genre}</p>
+        </div>
+        <button class="remove-btn" data-id="${movie.id}" aria-label="Hapus ${movie.title} dari watchlist">
+        <i class="ti ti-trash"></i>
+        </button>
+    </div>
+    `;
+    })
+}
