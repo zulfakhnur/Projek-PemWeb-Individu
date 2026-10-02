@@ -260,3 +260,23 @@ main {
     line-height: 1.5;
     color: var(--color-text);
 }
+
+.btn-primary {
+    font-family: inherit;
+    font-size: 13px;
+    color: var(--color-surface);
+    background-color: var(--color-primary);
+    margin-top: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-dark);
+}
+
