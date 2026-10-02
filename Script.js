@@ -269,5 +269,22 @@ function renderMovie(movieList) {
         container.innerHTML = `<p class="empty-state">Film tidak ditemukan</p>`;
         return;
     }
+
+    movieList.forEach(movie => {
+        const inWatchlist = isInWatchlist(movie.id);
+        const heartIconClass = inWatchlist ? "ti ti-heart-filled" : "ti ti-heart";
+        const activeClass = inWatchlist ? "active" : "";
+
+        container.innerHTML += `
+        <article class="movie-card" data-id="${movie.id}">
+            <div class="poster-wrapper">
+                <img src="${movie.poster}" alt="Poster film ${movie.title}">
+                <button class="watchlist-btn ${activeClass}" aria-label="Tambah ${movie.title} ke watchlist"><i class="${heartIconClass}"></i>
+                </button>
+            </div>
+            <h3>${movie.title}</h3>
+            <p class="info"><span class="star">&#9733;</span> ${movie.rating} &middot; ${movie.year}</p>
+        </article>`;
+    });
 }
 
