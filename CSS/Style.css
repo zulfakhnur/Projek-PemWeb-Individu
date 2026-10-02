@@ -98,6 +98,7 @@ main {
 
 .search-bar input {
     border: none;
+    outline: none;
     font-family: inherit;
     font-size: 13px;
     color: var(--color-text);
