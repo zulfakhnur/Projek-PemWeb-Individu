@@ -123,3 +123,9 @@ main {
     color: var(--color-text-secondary);
     cursor: pointer;
 }
+
+.filter-btn:hover {
+    background-color: var(--color-bg);
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}
