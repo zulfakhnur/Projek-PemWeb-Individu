@@ -25,6 +25,8 @@ body {
     display: none;
 }
 
+/*  */
+
 header{
     background-color: var(--color-surface);
     padding: 16px 40px;
@@ -64,6 +66,8 @@ header nav {
     font-weight: 500;
 }
 
+/*  */
+
 main {
     margin: 0 auto;
     padding: 32px 40px
@@ -79,6 +83,8 @@ main {
     color: var(--color-text-secondary);
     margin-bottom: 20px;
 }
+
+/*  */
 
 .search-bar {
     display: flex;
@@ -104,6 +110,8 @@ main {
     color: var(--color-text);
     width: 100%;
 }
+
+/*  */
 
 .filter-genre {
     display: flex;
@@ -135,3 +143,12 @@ main {
     color: var(--color-surface);
     border: none;
 }
+
+/*  */
+
+.movie-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+}
+
