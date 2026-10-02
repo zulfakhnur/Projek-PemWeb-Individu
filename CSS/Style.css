@@ -129,3 +129,9 @@ main {
     color: var(--color-primary);
     border-color: var(--color-primary);
 }
+
+.filter-btn.active {
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+    border: none;
+}
