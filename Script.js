@@ -303,3 +303,12 @@ function renderMovie(movieList) {
     });
 }
 
+// --------
+
+function getFilteredMovies() {
+    return movies.filter(movie => {
+        const matchGenre = currentGenre === "All" || movie.genre === currentGenre;
+        const matchSearch = movie.title.toLowerCase().includes(currentSearch);
+        return matchGenre && matchSearch;
+    });
+}
