@@ -3,31 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/@tabler/icons-webfont/dist/tabler-icons.min.css">
     <title>Cineva</title>
 </head>
 <body>
     <header>
         <nav>
-            <img src="../Projek2 (individu)/IMG/logo.png" alt="Logo Web">
-            <h2>Cineva</h2>
+            <div>
+                <img src="../Projek2 (individu)/IMG/logo.png" alt="Logo Web">
+                <h2>Cineva</h2>
+            </div>
 
-            <a href="#" id="navHome" class="nav-link active"><i class="ti ti-home"></i>Home</a>
+            <ul class="nav-menu">
+            <li><a href="#" id="navHome" class="nav-link active"><i class="ti ti-home"></i>Home</a></li>
             
-            <a href="#" id="navWatchlist" class="nav-link"><i class="ti ti-heart"></i>Watchlist</a>
+            <li><a href="#" id="navWatchlist" class="nav-link"><i class="ti ti-heart"></i>Watchlist</a></li>
+            </ul>
         </nav>
     </header>
 
     <main>
         <section id="homeSection">
-            <h1>What to Watch?</h1>
-            <p>Film pilihan minggu ini.</p>
+            <div class="section-heading">
+                <h1>What to Watch?</h1>
+                <p>Film pilihan minggu ini.</p>
+            </div>
+
+            <div class="search-bar">
+                <i class="ti ti-search"></i>
+                <input type="text" id="searchInput" placeholder="Cari judul film..." aria-label="Cari judul film">
+            </div>
+
             <div id="filterGenre">
                 <button id="btnAll" class="filter-btn active">All</button>
                 <button id="btnAction" class="filter-btn ">Action</button>
                 <button id="btnComedy" class="filter-btn ">Comedy</button>
                 <button id="btnSciFi" class="filter-btn ">Sci-Fi</button>
                 <button id="btnMystery" class="filter-btn ">Mystery</button>
+            </div>
+
+            <div class="movie-container" id="movieContainer">
+
+                <article class="movie-card" data-id="1">
+                    <div class="poster-wrapper">
+                        <img src="../Projek2 (individu)/IMG/Poster film/action/World War Z.jpeg" alt="Poster film World War Z">
+                        <button class="watchlist-btn" aria-label="Tambah WWZ ke watchlist"><i class="ti ti-heart"></i></button>
+                    </div>
+                    <h3>World War Z</h3>
+                    <p class="meta">★ 7.7 &middot; 2009</p>
+                </article>
+
             </div>
         </section>
     </main>
