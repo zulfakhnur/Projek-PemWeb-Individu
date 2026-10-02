@@ -476,5 +476,14 @@ function updateWatchlistCount() {
     document.getElementById("watchlistcount").textContent = watchlist.length + "film disimpan";
 }
 
+// -------------
 
+function showToast(message) {
+    const toast = document.getElementById("toast");
+    toast.textContent = message;
+    toast.classList.remove("hidden");
 
+    seTimeout (() => {
+        toast.classList.add("hidden");
+    }, 2500);
+}
