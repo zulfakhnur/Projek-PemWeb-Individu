@@ -21,9 +21,9 @@ body {
     color: var(--color-text);
 }
 
-.hidden {
+/* .hidden {
     display: none;
-}
+} */
 
 .star {
     color: var(--color-accent);
