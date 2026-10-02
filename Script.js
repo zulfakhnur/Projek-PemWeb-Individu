@@ -342,5 +342,25 @@ document.getElementById("searchInput").addEventListener("input", (e) => {
     applyFilter();
 });
 
+// --------
 
+function openDetail(id) {
+    const movie = movies.find(m => m.id === id);
+    if (!movie) return;
 
+    currentDetailId = id;
+
+    document.getElementById("detailPoster").src = movie.poster;
+    document.getElementById("detailPoster").alt = "Poster film " + movie.title;
+    document.getElementById("detailBreadcrumbTitle").textContent = movie.title;
+    document.getElementById("detailTitle").textContent = movie.title;
+    document.getElementById("detailMeta").innerHTML = `<span class="star">&#9733;</span> ${movie.rating} &middot; ${movie.year} &middot; ${movie.genre}`;
+    document.getElementById("detailSynopsis").textContent = movie.synopsis;
+    document.getElementById("detailDirektor").textContent = movie.director;
+    document.getElementById("detailWriter").textContent = movie.writer;
+
+    updateDetailWatchlistButton(movie);
+    renderCast(movie.cast);
+
+    showSection("detail")
+}
