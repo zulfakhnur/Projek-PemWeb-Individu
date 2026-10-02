@@ -176,3 +176,27 @@ main {
     border-radius: 8px;
     display: block;
 }
+
+.watchlist-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: var(--color-surface);
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.watchlist-btn.active {
+    color: #FF4D6D;
+}
+
+/*  */
+
