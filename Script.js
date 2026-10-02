@@ -286,5 +286,20 @@ function renderMovie(movieList) {
             <p class="info"><span class="star">&#9733;</span> ${movie.rating} &middot; ${movie.year}</p>
         </article>`;
     });
+
+    document.querySelectorAll(".poster-wrapper").forEach(poster => {
+        poster.addEventListener("click", () => {
+            const id = Number(poster.closest(".movie-card").dataset.id);
+            openDetail(id);
+        });
+    });
+
+    document.querySelectorAll(".movie-card .watchlist-btn").forEach(btn => {
+        btn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            const id = Number(btn.closest(".movie-card").dataset.id);
+            tooggleWatchlist(id);
+        });
+    });
 }
 
