@@ -405,3 +405,25 @@ document.getElementById("updateDetailWatchlistBtn").addEventListener("click", ()
 
 // ----------
 
+function isInWatchlist(id) {
+    return watchlist.some(movie => movie.id === id);
+}
+
+function tooggleWatchlist(id) {
+    const movie = movies.find(m => m.id === id);
+    if (!movie) return;
+
+    if (isInWatchlist(id)) {
+        removeFromWatchlist(id);
+    } else {
+        addToWatchlist(movie);
+    }
+
+    applyFilter();
+    renderWatchlist();
+    updateWatchlistCount();
+
+    if (currentDetailId === id) {
+        updateDetailWatchlistButton(movie);
+    }
+}
