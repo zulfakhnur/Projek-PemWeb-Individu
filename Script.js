@@ -324,3 +324,9 @@ function setActiveFilter(activeId) {
     });
     document.getElementById(activeId).classList.add("active");
 }
+
+function selectGenre(genre, btnId) {
+    currentGenre = genre;
+    setActiveFilter(btnId);
+    applyFilter();
+}
