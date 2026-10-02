@@ -221,14 +221,14 @@ const movies = [
 
 let watchlist = [];
 
-let genreSekarang = "All";
-let searchSekarang = "";
+let currentGenre = "All";
+let currentSearch = "";
 
-let idDetailSekarang = null;
+let currentDetailId = null;
 
 // --------
 
-function tampilkanSection(target) {
+function showSection(target) {
     document.getElementById("homeSection").classList.add("hidden");
     document.getElementById("detailSection").classList.add("hidden");
     document.getElementById("watchlistSection").classList.add("hidden");
@@ -243,19 +243,19 @@ function setNavAktif (activeId) {
 
 document.getElementById("navHome").addEventListener("click", (e) => {
     e.preventDefault();
-    tampilkanSection("home");
+    showSection("home");
     setNavAktif("navHome");
 });
 
 document.getElementById("navWatchlist").addEventListener("click", (e) => {
     e.preventDefault();
-    tampilkanSection("watchlist");
+    showSection("watchlist");
     setNavAktif("navWatchlist");
 });
 
 document.getElementById("backToHome").addEventListener("click", (e) => {
     e.preventDefault();
-    tampilkanSection("home");
+    showSection("home");
     setNavAktif("navHome");
 });
 
@@ -272,14 +272,13 @@ function renderMovie(movieList) {
 
     movieList.forEach(movie => {
         const inWatchlist = isInWatchlist(movie.id);
-        const heartIconClass = inWatchlist ? "ti ti-heart-filled" : "ti ti-heart";
         const activeClass = inWatchlist ? "active" : "";
 
         container.innerHTML += `
         <article class="movie-card" data-id="${movie.id}">
             <div class="poster-wrapper">
                 <img src="${movie.poster}" alt="Poster film ${movie.title}">
-                <button class="watchlist-btn ${activeClass}" aria-label="Tambah ${movie.title} ke watchlist"><i class="${heartIconClass}"></i>
+                <button class="watchlist-btn ${activeClass}" aria-label="Tambah ${movie.title} ke watchlist"><i class="ti ti-heart"></i>
                 </button>
             </div>
             <h3>${movie.title}</h3>
@@ -298,7 +297,7 @@ function renderMovie(movieList) {
         btn.addEventListener("click", (e) => {
             e.stopPropagation();
             const id = Number(btn.closest(".movie-card").dataset.id);
-            tooggleWatchlist(id);
+            toggleWatchlist(id);
         });
     });
 }
@@ -385,21 +384,21 @@ function renderCast(castArray) {
 }
 
 function updateDetailWatchlistButton(movie) {
-    const btn = document.getElementById("updateDetailWatchlistBtn");
+    const btn = document.getElementById("detailWatchlistBtn");
     const inWatchlist = isInWatchlist(movie.id);
 
     if (inWatchlist) {
         btn.classList.add("active");
-        btn.innerHTML = `<i class="ti ti-heart-filled"></i>Hapus dari Watchlist`;
+        btn.innerHTML = `<i class="ti ti-heart"></i>Hapus dari Watchlist`;
     } else {
         btn.classList.remove("active");
         btn.innerHTML = `<i class="ti ti-heart"></i>Tambahkan dari Watchlist`;
     }
 }
 
-document.getElementById("updateDetailWatchlistBtn").addEventListener("click", () => {
+document.getElementById("detailWatchlistBtn").addEventListener("click", () => {
     if (currentDetailId !== null) {
-        tooggleWatchlist(currentDetailId);
+        toggleWatchlist(currentDetailId);
     }
 });
 
@@ -409,7 +408,7 @@ function isInWatchlist(id) {
     return watchlist.some(movie => movie.id === id);
 }
 
-function tooggleWatchlist(id) {
+function toggleWatchlist(id) {
     const movie = movies.find(m => m.id === id);
     if (!movie) return;
 
@@ -466,24 +465,24 @@ function renderWatchlist() {
     })
         document.querySelectorAll(".remove-btn").forEach(btn =>{
         btn.addEventListener("click", () => {
-            const id = Number(btn.dataset.ic);
-            tooggleWatchlist(id);
+            const id = Number(btn.dataset.id);
+            toggleWatchlist(id);
         });
     });
 }
 
 function updateWatchlistCount() {
-    document.getElementById("watchlistcount").textContent = watchlist.length + "film disimpan";
+    document.getElementById("watchlistCount").textContent = watchlist.length + " film disimpan";
 }
 
 // -------------
 
 function showToast(message) {
     const toast = document.getElementById("toast");
-    toast.textContent = message;
+    toast.innerHTML = `<i class="ti ti-circle-check"></i> ${message}`;
     toast.classList.remove("hidden");
 
-    seTimeout (() => {
+    setTimeout (() => {
         toast.classList.add("hidden");
     }, 2500);
 }
