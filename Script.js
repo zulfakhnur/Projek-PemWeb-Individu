@@ -330,3 +330,17 @@ function selectGenre(genre, btnId) {
     setActiveFilter(btnId);
     applyFilter();
 }
+
+document.getElementById("btnAll").addEventListener("click", () => selectGenre("All", "btnAll"));
+document.getElementById("btnAction").addEventListener("click", () => selectGenre("Action", "btnAction"));
+document.getElementById("btnComedy").addEventListener("click", () => selectGenre("Comedy", "btnComedy"));
+document.getElementById("btnSciFi").addEventListener("click", () => selectGenre("Sci-Fi", "btnSciFi"));
+document.getElementById("btnMystery").addEventListener("click", () => selectGenre("Mystery", "btnMystery"));
+
+document.getElementById("searchInput").addEventListener("input", (e) => {
+    currentSearch = e.target.value.toLowerCase();
+    applyFilter();
+});
+
+
+
