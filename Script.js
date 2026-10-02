@@ -464,4 +464,17 @@ function renderWatchlist() {
     </div>
     `;
     })
+        document.querySelectorAll(".remove-btn").forEach(btn =>{
+        btn.addEventListener("click", () => {
+            const id = Number(btn.dataset.ic);
+            tooggleWatchlist(id);
+        });
+    });
 }
+
+function updateWatchlistCount() {
+    document.getElementById("watchlistcount").textContent = watchlist.length + "film disimpan";
+}
+
+
+
