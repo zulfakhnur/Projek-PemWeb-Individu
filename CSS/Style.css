@@ -310,19 +310,36 @@ main {
 }
 
 .cast-section h3 {
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 600;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
 }
 
 .cast-list {
     display: flex;
-    gap: 16px;
+    gap: 20px;
     overflow-x: auto;
     padding-bottom: 8px;
 }
 
+.cast-item {
+    flex-shrink: 0;
+    width: 90px;
+    text-align: 8px;
+}
 
+.cast-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 8px;
+}
+
+.cast-item p {
+    font-size: 13px;
+    line-height: 1.3;
+}
 
 /*  */
 
