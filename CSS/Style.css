@@ -48,3 +48,18 @@ header nav {
     list-style: none;
     gap: 24px;
 }
+
+.nav-link {
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--color-text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.nav-link.active {
+    color: var(--color-primary);
+    font-weight: 500;
+}
