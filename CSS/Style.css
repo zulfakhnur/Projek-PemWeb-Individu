@@ -105,4 +105,9 @@ main {
     width: 100%;
 }
 
-
+.filter-genre {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
