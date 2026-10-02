@@ -111,3 +111,15 @@ main {
     flex-wrap: wrap;
     margin-bottom: 24px;
 }
+
+.filter-btn {
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 6px 16px;
+    border-radius: 15px;
+    border: 1px solid var(--color-border);
+    background-color: var(--color-surface);
+    color: var(--color-text-secondary);
+    cursor: pointer;
+}
