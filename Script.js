@@ -396,3 +396,12 @@ function updateDetailWatchlistButton(movie) {
         btn.innerHTML = `<i class="ti ti-heart"></i>Tambahkan dari Watchlist`;
     }
 }
+
+document.getElementById("updateDetailWatchlistBtn").addEventListener("click", () => {
+    if (currentDetailId !== null) {
+        tooggleWatchlist(currentDetailId);
+    }
+});
+
+// ----------
+
