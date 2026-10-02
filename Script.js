@@ -383,3 +383,16 @@ function renderCast(castArray) {
         `;
     });
 }
+
+function updateDetailWatchlistButton(movie) {
+    const btn = document.getElementById("updateDetailWatchlistBtn");
+    const inWatchlist = isInWatchlist(movie.id);
+
+    if (inWatchlist) {
+        btn.classList.add("active");
+        btn.innerHTML = `<i class="ti ti-heart-filled"></i>Hapus dari Watchlist`;
+    } else {
+        btn.classList.remove("active");
+        btn.innerHTML = `<i class="ti ti-heart"></i>Tambahkan dari Watchlist`;
+    }
+}
