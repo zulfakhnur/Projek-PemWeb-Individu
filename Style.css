@@ -316,6 +316,14 @@ main {
     background-color: var(--color-primary-dark);
 }
 
+.btn-primary.active {
+    background-color: #FF4D6D;
+}
+
+.btn-primary.active:hover {
+    background-color: #E23A58;
+}
+
 .cast-section {
     max-width: 1100px;
     margin: 24px auto 0;
@@ -441,6 +449,10 @@ footer {
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+.notification.hidden {
+    display: none;
 }
 
 

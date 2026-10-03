@@ -226,6 +226,8 @@ let currentSearch = "";
 
 let currentDetailId = null;
 
+let toastTimeout;
+
 // --------
 
 function showSection(target) {
@@ -251,6 +253,7 @@ document.getElementById("navWatchlist").addEventListener("click", (e) => {
     e.preventDefault();
     showSection("watchlist");
     setNavAktif("navWatchlist");
+    renderWatchlist();
 });
 
 document.getElementById("backToHome").addEventListener("click", (e) => {
@@ -483,9 +486,10 @@ function showToast(message) {
     toast.innerHTML = `<i class="ti ti-circle-check"></i> ${message}`;
     toast.classList.remove("hidden");
 
-    setTimeout (() => {
+    clearTimeout(toastTimeout);
+    toastTimeout = setTimeout (() => {
         toast.classList.add("hidden");
-    }, 10);
+    }, 2500);
 }
 
 // --------------
