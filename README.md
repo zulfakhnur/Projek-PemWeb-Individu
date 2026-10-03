@@ -1,6 +1,6 @@
 # Cineva
 Cineva adalah website katalog film sederhana yang dibuat sebagai tugas individu mata kuliah Pemrograman Web. Website ini menampilkan daftar film lengkap sinopsis, rating, pemeran utama, dan fitur watchlist yang dibangun menggunakan HTML, CSS, dan JavaScript.  
-Live Demo:   
+Live Demo: https://zulfakhnur.github.io/Projek-PemWeb-Individu/   
 Repository: https://github.com/zulfakhnur/Projek-PemWeb-Individu   
 Desain Figma: https://www.figma.com/design/fvS1OFdCMmMtq5Rqq5FEG7/Project-Web-Sederhana?node-id=0-1&t=WxpJP3ARhKPu5ArV-1    
 
@@ -23,12 +23,20 @@ Desain Figma: https://www.figma.com/design/fvS1OFdCMmMtq5Rqq5FEG7/Project-Web-Se
    Struktur halaman dengan elemen semantik (header, nav, main, section, article, dan footer).
  - CSS3
    Flexbox dan Grid untuk layour, CSS custom properties (variabels) utnuk desain sistem, dan media query untuk desain responsif.
- - JavaScript
+ - JavaScript  
    DOM manipulation, event handling, array of objects, dan logika filter/search/watchlist.
- - Font
+ - Font  
    Inter lewat Google Fonts.
- - Icon
+ - Icon  
    Tabler Icons
 
- ## Dibuat oleh
- [Muhammad Zulfakhnur] — [2510131110012] Tugas Mata Kuliah Pemrograman Web
+## Cara Penggunaan
+1. Kunjungi link live demo di atas.
+2. Buka halaman Home, jelajahi film yang tersedia.
+3. Gunakan search bar atau tombol genre untuk menyaring film yang ingin dilihat.
+4. Klik poster film mana pun untuk melihat detail lengkap.
+5. Klik ikon hati di poster atau halaman detail untuk menambahkan film ke watchlist.
+6. Buka menu watchlist di navbar untuk melihat/menghapus watchlist film yang sudah disimpan.
+
+## Dibuat oleh
+[Muhammad Zulfakhnur] — [2510131110012] Tugas Mata Kuliah Pemrograman Web
