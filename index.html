@@ -10,8 +10,13 @@
     <title>Cineva</title>
 </head>
 <body>
+
+    <!-- HEADER DAN NAVBAR -->
     <header>
+
+        <!-- Menu Navigasi -->
         <nav>
+            <!-- Logo dan Brand -->
             <div class="logo">
                 <img src="IMG/logo.png" alt="Logo Web">
                 <span>Cineva</span>
@@ -30,17 +35,21 @@
     </header>
 
     <main>
+
+        <!-- HALAMAN BERANDA (HOME) -->
         <section id="homeSection">
             <div class="section-heading">
                 <h1>What to Watch?</h1>
                 <p>Film pilihan minggu ini.</p>
             </div>
 
+            <!-- input pencarian judul film -->
             <div class="search-bar">
                 <i class="ti ti-search"></i>
                 <input type="text" id="searchInput" placeholder="Cari judul film..." aria-label="Cari judul film">
             </div>
 
+            <!-- tombol filter genre -->
             <div class="filter-genre" id="filterGenre">
                 <button id="btnAll" class="filter-btn active">All</button>
                 <button id="btnAction" class="filter-btn ">Action</button>
@@ -49,13 +58,16 @@
                 <button id="btnMystery" class="filter-btn ">Mystery</button>
             </div>
 
+            <!-- kontainer movie card -->
             <div class="movie-container" id="movieContainer">
 
             </div>
         </section>
 
-
+        <!-- HALAMAN DETAIL FILM -->
         <section id="detailSection" class="hidden">
+
+            <!-- navigasi ke home -->
             <div class="back-nav">
                 <a href="#" id="backToHome">Home</a>
                 <span>&larr;</span>
@@ -63,26 +75,32 @@
             </div>
 
             <div class="detail-wrapper">
+
+                <!-- poster film -->
                 <img id="detailPoster" src="IMG/Poster film/comedy/The Hangover.jpeg" alt="Poster film The Hangover">
 
+                <!-- informasi film -->
                 <div class="detail-info">
                     <h2 id="detailTitle">The Hangover</h2>
                     <p class="info" id="detailMeta"><span class="star">&#9733;</span>7.7 &middot; 2009 &middot; Comedy</p>
 
+                    <!-- sinopsis -->
                     <h3>Sinopsis</h3>
                     <p id="detailSynopsis">Tiga sahabat terbangun setelah pesta lajang di Las Vegas tanpa ingatan tentang kejadian semalam, sementara sang calon pengantin pria menghilang. Mereka harus menjelajahi kota demi menemukan teman mereka tepat waktu untuk acara pernikahannya.</p>
 
+                    <!-- informasi sutradara dan penulis -->
                     <h3>Direktor</h3>
                     <p id="detailDirektor">Todd Phillips</p>
 
                     <h3>Penulis</h3>
                     <p id="detailWriter">Jon Lucas dan Scott Moore</p>
 
+                    <!-- tombol tambah ke Watchlist -->
                     <button id="detailWatchlistBtn" class="btn-primary"><i class="ti ti-heart"></i>Tambahkan ke Watchlist</button>
                 </div>
             </div>
 
-
+            <!-- daftar pemain film -->
             <div class="cast-section">
                 <h3>Pemeran Utama</h3>
                 <div id="castList" class="cast-list">
@@ -91,12 +109,16 @@
             </div>
         </section>
 
+        <!-- HALAMAN WATCHLIST -->
         <section id="watchlistSection" class="hidden">
+
+            <!-- hero Watchlist -->
             <div class="section-heading">
                 <h1>My Watchlist</h1>
                 <p id="watchlistCount"> 0 film disimpan</p>
             </div>
 
+            <!-- kontainer daftar film tersimpan -->
             <div class="watchlist-list" id="watchlistList">
             
             </div>
@@ -107,8 +129,10 @@
         <p>&copy; 2026 Cineva</p>
     </footer>
 
+    <!-- NOTIFIKATION (POPUP) -->
     <div id="toast" class="notification hidden"></div>
 
+    <!-- menghubungkan file JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>

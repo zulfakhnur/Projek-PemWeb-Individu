@@ -1,3 +1,4 @@
+// DATA FILM
 const movies = [
     {
         id: 1,
@@ -217,7 +218,7 @@ const movies = [
     }
 ];
 
-// -------
+// VARIABEL STATUS APLIKASI
 
 let watchlist = [];
 
@@ -228,9 +229,9 @@ let currentDetailId = null;
 
 let toastTimeout;
 
-// --------
-
+// NAVIGASI 
 function showSection(target) {
+    // menyembunyikan semua section utama
     document.getElementById("homeSection").classList.add("hidden");
     document.getElementById("detailSection").classList.add("hidden");
     document.getElementById("watchlistSection").classList.add("hidden");
@@ -262,17 +263,18 @@ document.getElementById("backToHome").addEventListener("click", (e) => {
     setNavAktif("navHome");
 });
 
-// ---------
-
+// RENDERING KONTEN
 function renderMovie(movieList) {
     const container = document.getElementById("movieContainer");
     container.innerHTML = "";
 
+    // menampilkan pesan jika hasil filter tidak ditemukan
     if (movieList.length === 0) {
         container.innerHTML = `<p class="empty-state">Film tidak ditemukan</p>`;
         return;
     }
 
+    // perulangan untuk membuat template elemen HTML kartu film
     movieList.forEach(movie => {
         const inWatchlist = isInWatchlist(movie.id);
         const activeClass = inWatchlist ? "active" : "";
@@ -296,6 +298,7 @@ function renderMovie(movieList) {
         });
     });
 
+    // 
     document.querySelectorAll(".movie-card .watchlist-btn").forEach(btn => {
         btn.addEventListener("click", (e) => {
             e.stopPropagation();
@@ -305,16 +308,19 @@ function renderMovie(movieList) {
     });
 }
 
-// --------
+// FILTER FILM
 
 function getFilteredMovies() {
     return movies.filter(movie => {
+        // mengecek current genre
         const matchGenre = currentGenre === "All" || movie.genre === currentGenre;
+        // mengecek pencarian dan judul film
         const matchSearch = movie.title.toLowerCase().includes(currentSearch);
         return matchGenre && matchSearch;
     });
 }
 
+// menerapkan hasil penyeringan
 function applyFilter() {
     const filtered = getFilteredMovies();
     renderMovie(filtered);
