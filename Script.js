@@ -451,19 +451,20 @@ function renderWatchlist() {
 
     watchlist.forEach(movie => {
         list.innerHTML += `
-    <div class="watchlist-item">
-        <img src="${movie.poster}" alt="${movie.title}">
-        <div class="text-wrap">
-        <h3>${movie.title}</h3>
-        <p class="info"><span class="star">&#9733;</span> ${movie.rating} &middot; ${movie.genre}</p>
-        </div>
-        <button class="remove-btn" data-id="${movie.id}" aria-label="Hapus ${movie.title} dari watchlist">
-        <i class="ti ti-trash"></i>
-        </button>
-    </div>
-    `;
-    })
-        document.querySelectorAll(".remove-btn").forEach(btn =>{
+            <div class="watchlist-item">
+                <img src="${movie.poster}" alt="${movie.title}">
+                <div class="text-wrap">
+                    <h3>${movie.title}</h3>
+                    <p class="info"><span class="star">&#9733;</span> ${movie.rating} &middot; ${movie.genre}</p>
+                </div>
+                <button class="remove-btn" data-id="${movie.id}" aria-label="Hapus ${movie.title} dari watchlist">
+                    <i class="ti ti-trash"></i>
+                </button>
+            </div>
+        `;
+    });
+
+    document.querySelectorAll(".remove-btn").forEach(btn =>{
         btn.addEventListener("click", () => {
             const id = Number(btn.dataset.id);
             toggleWatchlist(id);
@@ -484,7 +485,7 @@ function showToast(message) {
 
     setTimeout (() => {
         toast.classList.add("hidden");
-    }, 2500);
+    }, 10);
 }
 
 // --------------
