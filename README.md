@@ -30,5 +30,13 @@ Desain Figma: https://www.figma.com/design/fvS1OFdCMmMtq5Rqq5FEG7/Project-Web-Se
  - Icon  
    Tabler Icons
 
- ## Dibuat oleh
- [Muhammad Zulfakhnur] — [2510131110012] Tugas Mata Kuliah Pemrograman Web
+## Cara Penggunaan
+1. Kunjungi link live demo di atas.
+2. Buka halaman Home, jelajahi film yang tersedia.
+3. Gunakan search bar atau tombol genre untuk menyaring film yang ingin dilihat.
+4. Klik poster film mana pun untuk melihat detail lengkap.
+5. Klik ikon hati di poster atau halaman detail untuk menambahkan film ke watchlist.
+6. Buka menu watchlist di navbar untuk melihat/menghapus watchlist film yang sudah disimpan.
+
+## Dibuat oleh
+[Muhammad Zulfakhnur] — [2510131110012] Tugas Mata Kuliah Pemrograman Web
