@@ -1,8 +1,8 @@
 # Cineva
 Cineva adalah website katalog film sederhana yang dibuat sebagai tugas individu mata kuliah Pemrograman Web. Website ini menampilkan daftar film lengkap sinopsis, rating, pemeran utama, dan fitur watchlist yang dibangun menggunakan HTML, CSS, dan JavaScript.  
 Live Demo:   
-Repository:   
-Desain Figma:    
+Repository: https://github.com/zulfakhnur/Projek-PemWeb-Individu   
+Desain Figma: https://www.figma.com/design/fvS1OFdCMmMtq5Rqq5FEG7/Project-Web-Sederhana?node-id=0-1&t=WxpJP3ARhKPu5ArV-1    
 
 ## Fitur
 - Katalog Film  
