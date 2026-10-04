@@ -23,11 +23,11 @@ Desain Figma: https://www.figma.com/design/fvS1OFdCMmMtq5Rqq5FEG7/Project-Web-Se
    Struktur halaman dengan elemen semantik (header, nav, main, section, article, dan footer).
  - CSS3
    Flexbox dan Grid untuk layour, CSS custom properties (variabels) utnuk desain sistem, dan media query untuk desain responsif.
- - JavaScript
+ - JavaScript  
    DOM manipulation, event handling, array of objects, dan logika filter/search/watchlist.
- - Font
+ - Font  
    Inter lewat Google Fonts.
- - Icon
+ - Icon  
    Tabler Icons
 
  ## Dibuat oleh
